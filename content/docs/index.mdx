@@ -1,13 +1,213 @@
 ---
-title: Hello World
-description: Your first document
+title: Lexiq Content Guide
+description: A comprehensive guide to all content block types available in Lexiq
+category: "Getting Started"
+tags: ["Getting Started", "Documentation", "Content Guide"]
+image: "/images/lexiq-logo.png"
 ---
 
-Welcome to the docs! You can start writing documents in `/content/docs`.
+# Welcome to Lexiq
 
-## What is Next?
+Welcome to the Lexiq documentation! This guide will show you all the different types of content blocks you can use to create rich, engaging documentation.
+
+## Text Content
+
+### Headings and Subheadings
+
+You can use different heading levels to organize your content:
+
+# H1 - Main Heading
+
+## H2 - Section Heading
+
+### H3 - Subsection Heading
+
+#### H4 - Sub-subsection Heading
+
+##### H5 - Minor Heading
+
+###### H6 - Smallest Heading
+
+### Paragraphs and Text Formatting
+
+This is a regular paragraph with **bold text**, _italic text_, and `inline code`. You can also create ~~strikethrough text~~ and <mark>highlighted text</mark>.
+
+Here's another paragraph that demonstrates how text flows naturally. You can create multiple paragraphs to break up your content and make it more readable.
+
+### Lists
+
+#### Unordered Lists
+
+- First item
+- Second item with **bold text**
+- Third item with _italic text_
+- Nested item
+  - Sub-item 1
+  - Sub-item 2
+
+#### Ordered Lists
+
+1. First step
+2. Second step
+3. Third step
+   1. Sub-step A
+   2. Sub-step B
+
+#### Task Lists
+
+- [x] Completed task
+- [ ] Pending task
+- [ ] Another pending task
+
+### Blockquotes
+
+> This is a blockquote. It's great for highlighting important information, quotes from other sources, or emphasizing key points in your documentation.
+
+> You can also have multiple paragraphs in a blockquote.
+>
+> And even include **formatting** and `code` within the quote.
+
+## Code and Technical Content
+
+### Inline Code
+
+Use `inline code` for short code snippets, function names, or technical terms.
+
+### Code Blocks
+
+```javascript
+// JavaScript code block
+function greetUser(name) {
+  console.log(`Hello, ${name}!`);
+  return `Welcome to Lexiq, ${name}`;
+}
+
+const result = greetUser("Developer");
+```
+
+```python
+# Python code block
+def calculate_fibonacci(n):
+    if n <= 1:
+        return n
+    return calculate_fibonacci(n-1) + calculate_fibonacci(n-2)
+
+# Calculate first 10 Fibonacci numbers
+for i in range(10):
+    print(f"F({i}) = {calculate_fibonacci(i)}")
+```
+
+```css
+/* CSS code block */
+.lexiq-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.lexiq-heading {
+  color: #2563eb;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+```
+
+## Media Content
+
+### Images
+
+**Image Example:** This is where you would place an image. You can use local images from your `/public` directory or external URLs.
+
+_Caption: Example of image placement in Lexiq documentation_
+
+### Videos
+
+<video width="100%" controls>
+  <source
+    src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4"
+    type="video/mp4"
+  />
+  Your browser does not support the video tag.
+</video>
+
+_Caption: Sample video demonstrating Lexiq features_
+
+### Embedded Content
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+  frameBorder="0"
+  allowFullScreen
+></iframe>
+
+_Caption: Embedded YouTube video_
+
+## Interactive Elements
+
+### Cards and Links
 
 <Cards>
   <Card title="Learn more about Next.js" href="https://nextjs.org/docs" />
   <Card title="Learn more about Fumadocs" href="https://fumadocs.vercel.app" />
+  <Card title="Lexiq GitHub Repository" href="https://github.com/lexiq" />
 </Cards>
+
+### Tables
+
+| Feature           | Description                            | Status         |
+| ----------------- | -------------------------------------- | -------------- |
+| Markdown Support  | Full markdown syntax support           | ✅ Complete    |
+| Code Highlighting | Syntax highlighting for 50+ languages  | ✅ Complete    |
+| Image Support     | Drag & drop, resizing, captions        | ✅ Complete    |
+| Video Embedding   | YouTube, Vimeo, and direct video files | ✅ Complete    |
+| Interactive Cards | Custom card components                 | ✅ Complete    |
+| Dark Mode         | Automatic theme switching              | 🚧 In Progress |
+
+## Advanced Content
+
+### Mathematical Expressions
+
+Inline math: E = mc²
+
+Block math:
+
+∫ e^(-x²) dx = √π
+
+### Footnotes
+
+Here's a sentence with a footnote[^1].
+
+[^1]: This is the footnote content. It can contain multiple sentences and even **formatting**.
+
+### Definition Lists
+
+Term 1
+: Definition of term 1
+
+Term 2  
+: Definition of term 2 with **formatting**
+
+### Horizontal Rules
+
+---
+
+Use horizontal rules to separate major sections of your content.
+
+---
+
+## Call to Action
+
+Ready to start creating amazing documentation with Lexiq?
+
+<Cards>
+  <Card title="Get Started" href="/docs/getting-started" />
+  <Card title="View Examples" href="/docs/examples" />
+  <Card title="Join Community" href="https://discord.gg/lexiq" />
+</Cards>
+
+---
+
+_Last updated: December 2024_

@@ -1,4 +1,5 @@
-import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
+import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
+import { BookOpen } from "lucide-react";
 
 /**
  * Shared layout configurations
@@ -11,15 +12,10 @@ export const baseOptions: BaseLayoutProps = {
   nav: {
     title: (
       <>
-        <svg
-          width="24"
-          height="24"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-label="Logo"
-        >
-          <circle cx={12} cy={12} r={12} fill="currentColor" />
-        </svg>
-        My App
+        <div className="w-8 h-8 bg-gradient-to-br from-lime-400 to-emerald-500 rounded-lg flex items-center justify-center border-2 border-black">
+          <BookOpen className="w-4 h-4 text-black" />
+        </div>{" "}
+        <span className="font-serif text-2xl font-normal">Lexiq</span>
       </>
     ),
   },
