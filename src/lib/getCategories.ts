@@ -16,7 +16,7 @@ export function getCategoriesAndItems() {
     if (fs.statSync(folderPath).isDirectory()) {
       const files = fs
         .readdirSync(folderPath)
-        .filter((f) => f.endsWith(".mdx"));
+        .filter((f) => f.endsWith(".mdx") && f !== "index.mdx");
       categories[folder] = files.map((file) => {
         const filePath = path.join(folderPath, file);
         const source = fs.readFileSync(filePath, "utf8");

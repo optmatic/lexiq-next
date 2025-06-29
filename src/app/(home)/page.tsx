@@ -100,7 +100,7 @@ export default function LexiqLanding() {
                       .replace(/\b\w/g, (l) => l.toUpperCase())}
                   </h3>
                   <ul className="space-y-2">
-                    {items.map((item) => (
+                    {items.slice(0, 3).map((item) => (
                       <li key={item.slug}>
                         <Link
                           href={`/docs/${item.slug}`}
@@ -118,6 +118,17 @@ export default function LexiqLanding() {
                       </li>
                     ))}
                   </ul>
+                  {items.length > 3 && (
+                    <div className="mt-4 pt-3 border-t border-gray-100">
+                      <Link
+                        href={`/docs/${category}`}
+                        className="text-sm font-medium text-lime-700 hover:text-lime-800 hover:underline flex items-center"
+                      >
+                        See all {items.length} terms
+                        <ArrowRight className="ml-1 w-3 h-3" />
+                      </Link>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}
