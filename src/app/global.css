@@ -35,6 +35,17 @@ aside {
   --color-fd-primary: var(--color-primary);
 }
 
+/* Article rules */
+
+article h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-serif font-normal;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
