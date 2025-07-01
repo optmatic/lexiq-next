@@ -3,6 +3,15 @@
 @import "fumadocs-ui/css/preset.css";
 @import "tw-animate-css";
 
+/* Nav card styling */
+.nav-card h3 {
+  @apply text-lg font-light;
+}
+
+.nav-card a {
+  @apply text-sm font-light;
+}
+
 /* Search box styling */
 .bg-fd-secondary\/50 {
   @apply rounded-none cursor-text bg-lime-50/50 shadow-sm;

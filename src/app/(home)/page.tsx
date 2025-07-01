@@ -132,17 +132,6 @@ export default function LexiqLanding() {
               </Card>
             ))}
           </div>
-          <div className="text-center mt-10">
-            <Link href="/docs">
-              <Button
-                size="lg"
-                className="theme-gradient-dark text-white font-semibold border-2 border-black shadow-sm transition-all duration-300 mt-6"
-              >
-                Browse All Terms
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-            </Link>
-          </div>
         </div>
       </section>
     </div>
