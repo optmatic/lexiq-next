@@ -44,31 +44,30 @@ export default function LexiqLanding() {
       className={`${inter.variable} ${crimson.variable} min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900`}
     >
       {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-screen flex items-center justify-center brutalist-bg">
-        <div className="relative max-w-3xl mx-auto px-4 py-24 w-full text-center">
-          <Badge className="mb-8 theme-gradient-light px-2 py-1 border border-black shadow-sm text-black font-mono text-xs tracking-wider">
+      <section className="relative overflow-hidden py-20 flex items-center justify-center brutalist-bg">
+        <div className="relative max-w-4xl mx-auto px-4 py-12 w-full text-center">
+          <Badge className="mb-6 theme-gradient-light px-2 py-1 border border-black shadow-sm text-black font-mono text-xs tracking-wider">
             <Zap className="w-3 h-3 mr-2 text-lime-600" />
             Politics, Decoded
           </Badge>
-          <h1 className="text-5xl lg:text-7xl font-bold text-white mb-8 leading-tight font-heading">
-            <span className="">Your Modern</span>
+          <h1 className="text-4xl lg:text-6xl font-semibold text-white mb-6 leading-tight font-heading">
+            Your Modern{" "}
             <span className="theme-gradient-dark bg-clip-text text-transparent animate-gradient">
               Political Lexicon
             </span>
           </h1>
-          <p className="text-xl text-gray-200 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
+          <p className="text-lg text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed font-light">
             Cut through the political noise with clear, unbiased definitions of
             contemporary terms. Multiple perspectives, real-world context, and
             the clarity you need to understand today&apos;s political landscape.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link href="/docs">
               <Button
                 size="lg"
-                className="group relative overflow-hidden theme-gradient-light hover:from-lime-300 hover:to-green-300 text-black font-semibold border-2 border-black shadow-sm transition-all duration-300"
+                className="group cursor-pointer relative overflow-hidden theme-gradient-light hover:from-lime-300 hover:to-green-300 text-black font-semibold border-2 border-black shadow-sm transition-all duration-300"
               >
                 <span className="relative z-10 flex items-center">
-                  <span className="font-mono mr-2">&gt;</span>
                   Start Exploring
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </span>
