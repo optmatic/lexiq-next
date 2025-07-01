@@ -4,23 +4,23 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
-  BookOpen,
-  Globe,
+  // BookOpen,
+  // Globe,
   ArrowRight,
   Zap,
-  Shield,
-  Target,
-  Cpu,
-  Network,
-  Database,
-  BarChart3,
-  TrendingUp,
-  Users,
-  FileText,
+  // Shield,
+  // Target,
+  // Cpu,
+  // Network,
+  // Database,
+  // BarChart3,
+  // TrendingUp,
+  // Users,
+  // FileText,
 } from "lucide-react";
 import Link from "next/link";
 import { Inter, Crimson_Text } from "next/font/google";
-import { SearchBar } from "@/components/search-bar";
+// import { SearchBar } from "@/components/search-bar";
 import { getCategoriesAndItems } from "@/lib/getCategories";
 
 const inter = Inter({
