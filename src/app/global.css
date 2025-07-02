@@ -3,6 +3,13 @@
 @import "fumadocs-ui/css/preset.css";
 @import "tw-animate-css";
 
+#nd-nav
+  > div:nth-child(1)
+  > nav
+  > div
+  > button.inline-flex.items-center.rounded-full.border.p-1.max-lg\:hidden {
+  display: none;
+}
 /* Nav card styling */
 .nav-card h3 {
   @apply text-lg font-light;
@@ -10,6 +17,12 @@
 
 .nav-card a {
   @apply text-sm font-light;
+}
+
+/* Ensure navigation is always visible */
+nav[data-fd-nav],
+header[data-fd-nav] {
+  display: flex !important;
 }
 
 /* Search box styling */
@@ -22,6 +35,43 @@
 }
 
 /* Aside rules */
+
+/* Hide navigation and aside toggles */
+[data-fd-nav-toggle],
+[data-fd-aside-toggle],
+[data-fd-nav-toggle-button],
+[data-fd-aside-toggle-button],
+.fd-nav-toggle,
+.fd-aside-toggle,
+button[aria-label*="menu"],
+button[aria-label*="toggle"],
+button[aria-label*="navigation"],
+button[aria-label*="sidebar"] {
+  display: none !important;
+}
+
+/* Ensure navigation and aside are always visible on mobile */
+@media (max-width: 768px) {
+  [data-fd-nav] {
+    display: flex !important;
+  }
+
+  [data-fd-aside] {
+    display: block !important;
+  }
+
+  /* Adjust layout for mobile without toggles */
+  [data-fd-docs-layout] {
+    grid-template-columns: 1fr !important;
+  }
+
+  [data-fd-aside] {
+    position: static !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+}
 
 body {
   background-image: radial-gradient(circle at 25% 25%, #a3e63514 0%, #0000 50%),
@@ -36,6 +86,7 @@ aside {
   width: 300px;
   height: 100%;
   @apply font-sans;
+  display: block !important;
 }
 
 .bg-fd-primary\/10 {
@@ -267,16 +318,6 @@ html {
   }
 }
 
-.theme-gradient-light {
-  background-image: linear-gradient(to right, #d9f99d, #86efac) !important;
-}
-
-.theme-gradient-dark {
-  background: linear-gradient(135deg, #a3e635 0%, #10b981 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
 .gradient-background {
   background: linear-gradient(124deg, #0f172a, #0f172a, #064e3b);
   background-size: 180% 180%;
@@ -382,4 +423,15 @@ html {
 
 .animate-spin-slow {
   animation: spin-slow 6s linear infinite;
+}
+
+/* Hide theme toggle (sun/moon) in nav */
+nav [data-fd-theme-toggle],
+nav [aria-label*="theme"],
+nav [aria-label*="dark"],
+nav [aria-label*="light"],
+nav [data-fd-nav] button[aria-label*="theme"],
+nav [data-fd-nav] button[aria-label*="dark"],
+nav [data-fd-nav] button[aria-label*="light"] {
+  display: none !important;
 }

@@ -81,20 +81,18 @@ export function SearchBar() {
               <SearchDialogListItem
                 item={item}
                 onClick={onClick}
-                className="p-4 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                className="p-4 hover:bg-gray-100 transition-colors"
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">
+                    <h3 className="font-semibold text-gray-900">
                       {item.type === "page"
                         ? "Page"
                         : item.type === "heading"
                         ? "Heading"
                         : "Text"}
                     </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                      {item.content}
-                    </p>
+                    <p className="text-sm text-gray-600 mt-1">{item.content}</p>
                   </div>
                   <ArrowRight className="w-4 h-4 text-gray-400" />
                 </div>

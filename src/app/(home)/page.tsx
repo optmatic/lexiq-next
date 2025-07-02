@@ -49,13 +49,13 @@ export default function LexiqLanding() {
         {/* Hero Section */}
         <section className="relative overflow-hidden py-20 flex items-center justify-center gradient-background">
           <div className="relative max-w-4xl mx-auto px-4 py-12 w-full text-center">
-            <Badge className="mb-6 theme-gradient-light px-2 py-1 border border-black shadow-sm text-black font-mono text-xs tracking-wider">
+            <Badge className="mb-6 bg-gradient-to-r from-lime-200 to-emerald-200 px-2 py-1 border border-black shadow-sm text-black font-mono text-xs tracking-wider">
               <Zap className="w-3 h-3 mr-2 text-lime-600" />
               Politics, Decoded
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-semibold text-white mb-4 leading-tight font-heading">
               Your Modern{" "}
-              <span className="theme-gradient-dark bg-clip-text text-transparent animate-gradient">
+              <span className="bg-gradient-to-r from-lime-400 to-emerald-500 bg-clip-text text-transparent animate-gradient">
                 Political Lexicon
               </span>
             </h1>
@@ -73,7 +73,7 @@ export default function LexiqLanding() {
               >
                 Explore
                 <ArrowRight className="ml-2 w-6 h-6 transition-transform duration-200 group-hover:translate-x-1" />
-                <span className="absolute left-0 -bottom-1 w-full h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 theme-gradient-light rounded" />
+                <span className="absolute left-0 -bottom-1 w-full h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-lime-200 to-emerald-200 rounded" />
               </a>
             </div> */}
           </div>
@@ -92,7 +92,7 @@ export default function LexiqLanding() {
             <div className="text-center mb-16">
               {/* Animated Globe Icon */}
               <div className="flex justify-center mb-6">
-                <span className="w-16 h-16 flex items-center justify-center rounded-full theme-gradient-light shadow-lg">
+                <span className="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-r from-lime-200 to-emerald-200 shadow-lg">
                   <Globe className="w-10 h-10 text-slate-800 animate-spin-slow" />
                 </span>
               </div>
@@ -119,7 +119,7 @@ export default function LexiqLanding() {
       </main>
       {/* Footer pill at the bottom */}
       <footer className="w-full flex justify-center mt-auto pt-10 pb-6 sm:pb-8">
-        <div className="px-6 py-2 rounded-xl theme-gradient-light shadow-md border border-lime-100 text-gray-700 text-sm font-medium flex items-center">
+        <div className="px-6 py-2 rounded-xl bg-gradient-to-r from-lime-200 to-emerald-200 shadow-md border border-lime-100 text-gray-700 text-sm font-medium flex items-center">
           Built by{" "}
           <a
             href="https://optimatic.com.au"
