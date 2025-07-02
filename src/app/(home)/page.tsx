@@ -40,11 +40,9 @@ export default function LexiqLanding() {
   const categoriesData = getCategoriesAndItems();
 
   return (
-    <div
-      className={`${inter.variable} ${crimson.variable} min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900`}
-    >
+    <div className={`${inter.variable} ${crimson.variable} min-h-screen`}>
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 flex items-center justify-center brutalist-bg">
+      <section className="relative overflow-hidden py-20 flex items-center justify-center gradient-background">
         <div className="relative max-w-4xl mx-auto px-4 py-12 w-full text-center">
           <Badge className="mb-6 theme-gradient-light px-2 py-1 border border-black shadow-sm text-black font-mono text-xs tracking-wider">
             <Zap className="w-3 h-3 mr-2 text-lime-600" />
