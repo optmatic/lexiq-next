@@ -63,8 +63,10 @@ export default function LexiqLanding() {
           <div className="flex justify-center items-center md:ml-2">
             <a
               href="/docs"
-              className="relative inline-flex items-center px-6 py-2 font-heading text-xl text-white transition-colors duration-200 group"
-              style={{ letterSpacing: "0.03em" }}
+              className="relative inline-flex items-center px-6 py-2 font-heading text-xl text-white transition-all duration-300 group animate-pulse hover:shadow-[0_0_16px_4px_rgba(217,249,157,0.7)] focus:shadow-[0_0_16px_4px_rgba(217,249,157,0.7)]"
+              style={{
+                letterSpacing: "0.03em",
+              }}
             >
               Explore
               <ArrowRight className="ml-2 w-6 h-6 transition-transform duration-200 group-hover:translate-x-1" />

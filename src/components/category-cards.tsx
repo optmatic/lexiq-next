@@ -24,7 +24,7 @@ export default function CategoryCards({ categoriesData }: CategoryCardsProps) {
       {Object.entries(categoriesData).map(([category, items]) => (
         <Card
           key={category}
-          className="bg-white border rounded-md border-slate-900 transition-shadow duration-200 hover:shadow-lg relative overflow-hidden min-h-[320px] flex flex-col"
+          className="bg-white border border-slate-900 transition-shadow duration-200 hover:shadow-lg relative overflow-hidden min-h-[320px] flex flex-col"
           style={{ borderImage: "none" }}
           onClick={() => router.push(`/docs/${category}`)}
           tabIndex={0}
@@ -46,7 +46,7 @@ export default function CategoryCards({ categoriesData }: CategoryCardsProps) {
                 <li key={item.slug} onClick={(e) => e.stopPropagation()}>
                   <Link
                     href={`/docs/${item.slug}`}
-                    className="block group/item transition-colors duration-200  hover:bg-lime-50/90 cursor-pointer rounded-none px-2 py-1 "
+                    className="block group/item transition-all duration-300 cursor-pointer rounded-none px-2 py-1 hover:bg-lime-50 hover:shadow-[0_0_12px_3px_rgba(217,249,157,0.7)] focus:shadow-[0_0_12px_3px_rgba(217,249,157,0.7)] hover:text-lime-900"
                   >
                     <span className="font-light">{item.title}</span>
                     {item.description && (
