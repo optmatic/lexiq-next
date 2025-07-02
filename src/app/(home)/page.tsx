@@ -39,7 +39,7 @@ const crimson = Crimson_Text({
 
 export default function LexiqLanding() {
   // Dynamically get categories and items
-  const categoriesData = getCategoriesAndItems();
+  const { categories, categoryMeta } = getCategoriesAndItems();
 
   return (
     <div className={`${inter.variable} ${crimson.variable} min-h-screen`}>
@@ -106,14 +106,27 @@ export default function LexiqLanding() {
           </div>
 
           <div className="relative">
-            <CategoryCards categoriesData={categoriesData} />
+            <CategoryCards
+              categoriesData={categories}
+              categoryMeta={categoryMeta}
+            />
           </div>
 
           {/* Bottom accent */}
           <div className="mt-16 text-center">
             <div className="inline-flex items-center space-x-2 text-sm text-gray-500">
               <span className="w-2 h-2 bg-lime-400 rounded-full animate-pulse" />
-              <span>All content is regularly updated and fact-checked</span>
+              <span>
+                Built by{" "}
+                <a
+                  href="https://thomaus.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-lime-700"
+                >
+                  thomaus.com
+                </a>
+              </span>
               <span className="w-2 h-2 bg-lime-400 rounded-full animate-pulse delay-500" />
             </div>
           </div>

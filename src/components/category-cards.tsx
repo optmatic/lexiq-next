@@ -21,12 +21,54 @@ interface CategoryItem {
   description?: string;
 }
 
+interface CategoryMeta {
+  title: string;
+  icon?: string;
+  description?: string;
+}
+
 // Define the type for the categoriesData prop
 interface CategoryCardsProps {
   categoriesData: Record<string, CategoryItem[]>;
+  categoryMeta: Record<string, CategoryMeta>;
 }
 
-// Icon mapping for categories
+// Lucide icon map for string lookup
+const lucideIconMap: Record<string, React.ElementType> = {
+  Globe,
+  BookOpen,
+  Shield,
+  TrendingUp,
+  Users,
+  FileText,
+  Target,
+};
+
+function renderCategoryIcon(icon?: string, fallbackIcon?: React.ElementType) {
+  if (!icon)
+    return fallbackIcon
+      ? React.createElement(fallbackIcon, {
+          className: "w-8 h-8 text-lime-600",
+        })
+      : null;
+  // Emoji (short, non-alphabetic string)
+  if (icon && icon.length <= 3 && !/^[a-zA-Z]+$/.test(icon)) {
+    return (
+      <span className="text-2xl" aria-hidden>
+        {icon}
+      </span>
+    );
+  }
+  // Lucide icon name
+  const LucideIcon = lucideIconMap[icon];
+  if (LucideIcon) return <LucideIcon className="w-8 h-8 text-lime-600" />;
+  // Fallback
+  return fallbackIcon
+    ? React.createElement(fallbackIcon, { className: "w-8 h-8 text-lime-600" })
+    : null;
+}
+
+// Icon mapping for categories (fallback)
 const getCategoryIcon = (category: string) => {
   const categoryLower = category.toLowerCase();
   if (
@@ -47,14 +89,17 @@ const getCategoryIcon = (category: string) => {
   return BookOpen;
 };
 
-export default function CategoryCards({ categoriesData }: CategoryCardsProps) {
+export default function CategoryCards({
+  categoriesData,
+  categoryMeta,
+}: CategoryCardsProps) {
   const router = useRouter();
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {Object.entries(categoriesData).map(([category, items], index) => {
-        const IconComponent = getCategoryIcon(category);
-
+        const meta = categoryMeta[category] || {};
+        const fallbackIcon = getCategoryIcon(category);
         return (
           <Card
             key={category}
@@ -76,15 +121,16 @@ export default function CategoryCards({ categoriesData }: CategoryCardsProps) {
 
             {/* Category icon */}
             <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity duration-300">
-              <IconComponent className="w-8 h-8 text-lime-600" />
+              {renderCategoryIcon(meta.icon, fallbackIcon)}
             </div>
 
             <CardContent className="p-6 relative z-10 flex flex-col flex-1">
               <div className="mb-4">
                 <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-lime-800 transition-colors duration-300">
-                  {category
-                    .replace(/-/g, " ")
-                    .replace(/\b\w/g, (l) => l.toUpperCase())}
+                  {meta.title ||
+                    category
+                      .replace(/-/g, " ")
+                      .replace(/\b\w/g, (l) => l.toUpperCase())}
                 </h3>
                 <div className="w-8 h-0.5 bg-gradient-to-r from-lime-400 to-emerald-400 rounded-full group-hover:w-12 transition-all duration-300" />
               </div>
