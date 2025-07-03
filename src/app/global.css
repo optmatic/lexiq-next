@@ -7,10 +7,61 @@ header {
   @apply bg-lime-50/90;
 }
 
-#nd-nav > div:nth-child(1) > nav > ul:nth-child(4) > li {
-  display: none;
+/* Article scrollbar */
+
+.bg-fd-primary {
+  @apply bg-lime-400;
 }
 
+article > *:first-child {
+  display: inline-block !important;
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  align-self: flex-start !important;
+  /* Your badge styles: */
+  @apply mb-3 text-slate-900 font-semibold uppercase bg-gradient-to-r from-lime-200 to-emerald-200 px-3 py-1 rounded-xl text-xs shadow-md border border-lime-100;
+}
+/* article > a:first-of-type {
+  @apply text-slate-900 font-semibold  uppercase bg-gradient-to-r from-lime-200 to-emerald-200 px-3 py-1 rounded-xl text-xs shadow-md border border-lime-100;
+} */
+article p {
+  @apply mt-0 mb-4;
+}
+article {
+  @apply gap-2;
+}
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  @apply mt-8 mb-2 font-serif font-normal;
+}
+
+article > h1:first-of-type,
+article > h2:first-of-type,
+article > h3:first-of-type,
+article > h4:first-of-type,
+article > h5:first-of-type,
+article > h6:first-of-type {
+  @apply mt-0;
+}
+
+article p:last-child {
+  @apply mb-0;
+}
+
+article iframe {
+  @apply min-h-120 border-2 border-black/90;
+  @apply shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] rounded-none bg-white;
+}
+
+#nd-toc h3 {
+  @apply !text-slate-900;
+}
 #nd-nav > div:nth-child(1) > nav > ul:nth-child(4) > li > a {
   display: none;
 }
@@ -123,15 +174,6 @@ aside {
 }
 
 /* Article rules */
-
-article h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @apply font-serif font-normal;
-}
 
 article img {
   @apply border-2 border-black/90;
