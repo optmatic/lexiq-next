@@ -105,17 +105,9 @@ export default function CategoryCards({
         return (
           <Card
             key={category}
-            className="category-card group bg-white border border-slate-200 transition-all duration-300 hover:shadow-xl hover:shadow-lime-100/50 hover:border-lime-300 relative overflow-hidden min-h-[320px] flex flex-col transform hover:-translate-y-1"
+            className="category-card group bg-white border cursor-text border-slate-200 transition-all duration-300 hover:shadow-xl hover:shadow-lime-100/50 hover:border-lime-300 relative overflow-hidden min-h-[320px] flex flex-col transform hover:-translate-y-1"
             style={{
               borderImage: "none",
-            }}
-            onClick={() => router.push(`/docs/${category}`)}
-            tabIndex={0}
-            role="button"
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                router.push(`/docs/${category}`);
-              }
             }}
           >
             {/* Subtle gradient overlay on hover */}

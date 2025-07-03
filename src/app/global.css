@@ -20,7 +20,7 @@ article > *:first-child {
   min-width: 0 !important;
   align-self: flex-start !important;
   /* Your badge styles: */
-  @apply mb-3 text-slate-900 font-semibold uppercase bg-gradient-to-r from-lime-200 to-emerald-200 px-3 py-1 rounded-xl text-xs shadow-md border border-lime-100;
+  @apply mb-3 font-sans text-slate-900 font-semibold uppercase !bg-gradient-to-r !from-lime-200 !to-emerald-200 px-3 py-1 rounded-xl text-xs shadow-md border border-lime-100;
 }
 /* article > a:first-of-type {
   @apply text-slate-900 font-semibold  uppercase bg-gradient-to-r from-lime-200 to-emerald-200 px-3 py-1 rounded-xl text-xs shadow-md border border-lime-100;
@@ -55,7 +55,7 @@ article p:last-child {
 }
 
 article iframe {
-  @apply min-h-120 border-2 border-black/90;
+  @apply min-h-120 min-w-full border-2 border-black/90;
   @apply shadow-[4px_4px_0px_0px_rgba(0,0,0,0.9)] rounded-none bg-white;
 }
 
@@ -489,4 +489,28 @@ nav [data-fd-nav] button[aria-label*="theme"],
 nav [data-fd-nav] button[aria-label*="dark"],
 nav [data-fd-nav] button[aria-label*="light"] {
   display: none !important;
+}
+
+/* --- Custom scrollbar for #nd-toc (Table of Contents) --- */
+#nd-toc {
+  @apply px-2;
+}
+
+/* Accent for TOC items only on hover/active */
+#nd-toc a:hover,
+#nd-toc a.active {
+  @apply rounded-none text-slate-900 italic;
+}
+
+#nd-toc h3:first-of-type {
+  @apply mb-2 text-slate-900 text-base;
+}
+
+article:last-of-type div > a {
+  @apply bg-gradient-to-br hover:from-lime-50 hover:to-emerald-50 transition-all duration-300 hover:shadow-xl hover:shadow-lime-100/50 hover:border-lime-300 relative overflow-hidden transform hover:-translate-y-1;
+}
+
+article:only-of-type div > a {
+  /* Prevent overlap of first/last-of-type styles when only one article exists */
+  @apply bg-gradient-to-br transition-all duration-300 relative overflow-hidden;
 }

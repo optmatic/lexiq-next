@@ -164,7 +164,7 @@ export default function LexiqLanding() {
                     <Globe className="w-10 h-10 text-slate-800 animate-spin-slow" />
                   </span>
                 </div>
-                <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4 font-heading">
+                <h2 className="text-3xl lg:text-4xl font-semibold text-slate-900 mb-4 font-heading">
                   Explore Categories
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
