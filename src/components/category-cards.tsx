@@ -122,19 +122,19 @@ export default function CategoryCards({
             <div className="absolute inset-0 bg-gradient-to-br from-lime-50/0 to-emerald-50/0 group-hover:from-lime-50/30 group-hover:to-emerald-50/30 transition-all duration-300 pointer-events-none" />
 
             {/* Category icon */}
-            <div className="absolute top-4 right-4 opacity-100 transition-opacity duration-300">
+            <div className="absolute top-4 right-4 opacity-100 transition-opacity duration-300  w-12 h-12 flex items-center justify-center">
               {renderCategoryIcon(meta.icon, fallbackIcon)}
             </div>
 
             <CardContent className="p-6 relative z-10 flex flex-col flex-1">
               <div className="mb-4">
-                <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-lime-800 transition-colors duration-300">
+                <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-slate-900 transition-colors duration-300">
                   {meta.title ||
                     category
                       .replace(/-/g, " ")
                       .replace(/\b\w/g, (l) => l.toUpperCase())}
                 </h3>
-                <div className="w-8 h-0.5 bg-gradient-to-r from-lime-400 to-emerald-400 rounded-full group-hover:w-12 transition-all duration-300" />
+                <div className="w-8 h-0.5 bg-gradient-to-r from-lime-200 to-emerald-200 rounded-full group-hover:w-12 transition-all duration-300" />
               </div>
 
               <ul className="space-y-2 flex-1">
@@ -144,7 +144,7 @@ export default function CategoryCards({
                     <li key={item.slug} onClick={(e) => e.stopPropagation()}>
                       <Link
                         href={`/docs/${item.slug}`}
-                        className="category-item block group/item transition-all duration-300 cursor-pointer rounded-md px-3 py-2 hover:bg-lime-50 hover:shadow-sm hover:shadow-lime-100/50 focus:shadow-sm focus:shadow-lime-100/50 hover:text-lime-900 border border-transparent hover:border-lime-200"
+                        className="category-item block group/item transition-all duration-300 cursor-pointer rounded-md px-3 py-2 hover:bg-lime-50 hover:shadow-sm hover:shadow-lime-100/50 focus:shadow-sm focus:shadow-lime-100/50 hover:textlime-300 border border-transparent hover:border-lime-200"
                       >
                         <span className="font-medium text-sm">
                           {item.title}
@@ -162,10 +162,10 @@ export default function CategoryCards({
               <div className="mt-6 pt-4 border-t border-gray-100 group-hover:border-lime-200 transition-colors duration-300">
                 <Link
                   href={`/docs/${category}`}
-                  className="text-sm font-medium text-lime-700 hover:text-lime-800 flex items-center group/link transition-all duration-300"
+                  className="text-sm font-medium text-slate-900 hover:text-black flex items-center group/link transition-all duration-300"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <span className="group-hover/link:underline">
+                  <span className="group-hover/link:font-bold">
                     See all {(items as CategoryItem[]).length} terms
                   </span>
                   <ArrowRight className="ml-2 w-3 h-3 transition-transform duration-300 group-hover/link:translate-x-1" />

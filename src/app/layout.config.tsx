@@ -12,7 +12,7 @@ export const baseOptions: BaseLayoutProps = {
   nav: {
     title: (
       <>
-        <div className="w-8 h-8 bg-gradient-to-br from-lime-400 to-emerald-500 rounded-lg flex items-center justify-center border-2 border-black">
+        <div className="w-8 h-8 bg-gradient-to-r from-lime-200 to-emerald-200 shadow-md border border-lime-100 rounded-lg flex items-center justify-center">
           <BookOpen className="w-4 h-4 text-black" />
         </div>{" "}
         <span className="font-serif text-2xl font-normal">Lexiq</span>

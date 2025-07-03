@@ -31,7 +31,7 @@ header[data-fd-nav] {
 }
 
 .bg-fd-secondary\/50:hover {
-  @apply hover:shadow-xl hover:shadow-lime-100/50 hover:border-lime-300 bg-gradient-to-br from-lime-50/30 to-emerald-50/30 cursor-text;
+  @apply hover:shadow-xl hover:shadow-lime-100/50 hover:border-lime-200 bg-gradient-to-br from-lime-50/30 to-emerald-50/30 cursor-text;
 }
 
 /* Aside rules */

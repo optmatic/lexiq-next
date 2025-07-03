@@ -117,13 +117,13 @@ export default function LexiqLanding() {
           {/* Hero Section */}
           <section className="relative overflow-hidden py-20 flex items-center justify-center gradient-background">
             <div className="relative max-w-4xl mx-auto px-4 py-12 w-full text-center">
-              <Badge className="mb-6 bg-gradient-to-r from-lime-200 to-emerald-200 px-2 py-1 border border-black shadow-sm text-black font-mono text-xs tracking-wider">
+              <Badge className="mb-6 bg-gradient-to-r from-lime-200 to-emerald-200 shadow-md border border-lime-100 px-2 py-1 text-black font-mono text-xs tracking-wider">
                 <Zap className="w-3 h-3 mr-2 text-lime-600" />
                 Politics, Decoded
               </Badge>
               <h1 className="text-4xl lg:text-6xl font-semibold text-white mb-4 leading-tight font-heading">
                 Your Modern{" "}
-                <span className="bg-gradient-to-r from-lime-400 to-emerald-500 bg-clip-text text-transparent animate-gradient">
+                <span className="bg-gradient-to-r from-lime-200 to-emerald-200 bg-clip-text text-transparent animate-gradient">
                   Political Lexicon
                 </span>
               </h1>
@@ -160,7 +160,7 @@ export default function LexiqLanding() {
               <div className="text-center mb-16">
                 {/* Animated Globe Icon */}
                 <div className="flex justify-center mb-6">
-                  <span className="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-r from-lime-200 to-emerald-200 shadow-lg">
+                  <span className="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-r from-lime-200 to-emerald-200 shadow-md border border-lime-100">
                     <Globe className="w-10 h-10 text-slate-800 animate-spin-slow" />
                   </span>
                 </div>
@@ -172,7 +172,7 @@ export default function LexiqLanding() {
                   organized by theme and context for deeper understanding.
                 </p>
                 <div className="mt-6 flex justify-center">
-                  <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-lime-400 to-transparent" />
+                  <div className="w-16 h-0.5 bg-gradient-to-r from-lime-200 to-emerald-200" />
                 </div>
               </div>
 
@@ -193,7 +193,7 @@ export default function LexiqLanding() {
               href="https://optimatic.com.au"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-1 italic font-black hover:text-lime-700"
+              className="ml-1 italic font-black hover:text-slate-900"
             >
               optimatic
             </a>
