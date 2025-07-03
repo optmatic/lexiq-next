@@ -48,23 +48,25 @@ function renderCategoryIcon(icon?: string, fallbackIcon?: React.ElementType) {
   if (!icon)
     return fallbackIcon
       ? React.createElement(fallbackIcon, {
-          className: "w-8 h-8 text-lime-600",
+          className: "w-12 h-12 text-lime-600",
         })
       : null;
   // Emoji (short, non-alphabetic string)
   if (icon && icon.length <= 3 && !/^[a-zA-Z]+$/.test(icon)) {
     return (
-      <span className="text-2xl" aria-hidden>
+      <span className="text-3xl" aria-hidden>
         {icon}
       </span>
     );
   }
   // Lucide icon name
   const LucideIcon = lucideIconMap[icon];
-  if (LucideIcon) return <LucideIcon className="w-8 h-8 text-lime-600" />;
+  if (LucideIcon) return <LucideIcon className="w-12 h-12 text-lime-600" />;
   // Fallback
   return fallbackIcon
-    ? React.createElement(fallbackIcon, { className: "w-8 h-8 text-lime-600" })
+    ? React.createElement(fallbackIcon, {
+        className: "w-12 h-12 text-lime-600",
+      })
     : null;
 }
 
@@ -120,7 +122,7 @@ export default function CategoryCards({
             <div className="absolute inset-0 bg-gradient-to-br from-lime-50/0 to-emerald-50/0 group-hover:from-lime-50/30 group-hover:to-emerald-50/30 transition-all duration-300 pointer-events-none" />
 
             {/* Category icon */}
-            <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity duration-300">
+            <div className="absolute top-4 right-4 opacity-100 transition-opacity duration-300">
               {renderCategoryIcon(meta.icon, fallbackIcon)}
             </div>
 

@@ -371,6 +371,7 @@ html {
 .category-item {
   position: relative;
   overflow: hidden;
+  @apply border border-lime-100;
 }
 
 .category-item::before {
