@@ -3,6 +3,18 @@
 @import "fumadocs-ui/css/preset.css";
 @import "tw-animate-css";
 
+header {
+  @apply bg-lime-50/90;
+}
+
+#nd-nav > div:nth-child(1) > nav > ul:nth-child(4) > li {
+  display: none;
+}
+
+#nd-nav > div:nth-child(1) > nav > ul:nth-child(4) > li > a {
+  display: none;
+}
+
 #nd-nav
   > div:nth-child(1)
   > nav
