@@ -34,11 +34,12 @@ export function SearchBar() {
   return (
     <>
       <div className="max-w-2xl mx-auto mb-8">
-        <div className="relative">
-          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+        <div className="relative group">
+          <div className="absolute inset-0 bg-gradient-to-br from-lime-50/0 to-emerald-50/0 pointer-events-none group-hover:from-lime-50/30 group-hover:to-emerald-50/30 transition-all duration-300 rounded-xl z-0" />
+          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-lime-600 w-5 h-5 z-10" />
           <Input
             placeholder='Search political terms... (e.g., "deep state", "Abraham Accords")'
-            className="pl-12 pr-4 py-4 text-lg bg-white/10 border-2 border-white/20 text-white placeholder:text-gray-400 focus:border-lime-400 focus:bg-white/20 backdrop-blur-sm"
+            className="pl-12 pr-4 py-4 text-lg bg-white border border-slate-200 text-slate-900 placeholder:text-gray-400 focus:border-lime-400 focus:bg-white hover:shadow-xl hover:shadow-lime-100/50 hover:border-lime-300 transition-all duration-300 rounded-xl relative z-10"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             onKeyDown={(e) => {
@@ -48,7 +49,7 @@ export function SearchBar() {
             }}
           />
           <Button
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-lime-400 hover:bg-lime-500 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-lime-400 hover:bg-lime-500 text-black border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] z-10"
             onClick={() => handleSearch(searchQuery)}
           >
             Search

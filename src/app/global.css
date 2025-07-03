@@ -27,11 +27,11 @@ header[data-fd-nav] {
 
 /* Search box styling */
 .bg-fd-secondary\/50 {
-  @apply rounded-none cursor-text bg-lime-50/50 shadow-sm;
+  @apply bg-white border border-slate-200 shadow-sm rounded-xl transition-all duration-300;
 }
 
 .bg-fd-secondary\/50:hover {
-  @apply bg-gradient-to-r from-lime-50 to-lime-100 border-black/50;
+  @apply hover:shadow-xl hover:shadow-lime-100/50 hover:border-lime-300 bg-gradient-to-br from-lime-50/30 to-emerald-50/30 cursor-text;
 }
 
 /* Aside rules */
