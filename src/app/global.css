@@ -4,7 +4,7 @@
 @import "tw-animate-css";
 
 header {
-  @apply bg-lime-50/90;
+  @apply bg-gradient-to-br from-lime-50 to-emerald-50;
 }
 
 /* Article scrollbar */
