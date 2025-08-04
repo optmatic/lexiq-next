@@ -41,7 +41,7 @@ const crimson = Crimson_Text({
 export const metadata: Metadata = {
   title: "Lexiq - Your Modern Political Lexicon",
   description:
-    "Cut through the political noise with clear, unbiased definitions of contemporary political terms. Explore our comprehensive political lexicon organized by categories.",
+    "Cut through the political noise with clear, unbiased definitions of contemporary political terms. Explore our comprehensive political lexicon s by categories.",
   keywords: [
     "political terms",
     "political lexicon",
@@ -169,7 +169,7 @@ export default function LexiqLanding() {
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
                   Navigate through curated collections of political terminology,
-                  organized by theme and context for deeper understanding.
+                  organised by theme and context for deeper understanding.
                 </p>
                 <div className="mt-6 flex justify-center">
                   <div className="w-16 h-0.5 bg-gradient-to-r from-lime-200 to-emerald-200" />

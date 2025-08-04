@@ -12,6 +12,7 @@
     "@radix-ui/react-slot": "^1.2.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "critters": "^0.0.23",
     "fumadocs-core": "15.5.5",
     "fumadocs-mdx": "11.6.9",
     "fumadocs-ui": "15.5.5",

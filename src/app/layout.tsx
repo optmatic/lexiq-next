@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | Lexiq",
   },
   description:
-    "Cut through the political noise with clear, unbiased definitions of contemporary political terms. Explore our comprehensive political lexicon organized by categories.",
+    "Cut through the political noise with clear, unbiased definitions of contemporary political terms. Explore our comprehensive political lexicon organised by categories.",
   keywords: [
     "political terms",
     "political lexicon",
